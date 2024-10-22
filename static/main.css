@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #5F0F40, #310E68);
+    color: rgb(212, 212, 212);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+:root {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    padding: 16px;
+    /* display: flex; */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 30px;
+    }
+}
+
+.card {
+    border: 1px solid #fff6;
+    border-radius: 24px;
+    gap: 30px;
+    padding: 20px;
+    background: #fff2;
+    display: grid;
+    align-items: center;
+}
+
+.dial {
+    --p: 20;
+    --b: 2px;
+    --c: #fff8;
+    --w: 100px;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 16px;
+    font-family: sans-serif;
+
+    box-shadow: inset 0 0 8px #fff6;
+    border-radius: var(--w);
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    &:before {
+        inset: 0;
+        background: conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+        mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    }
+}

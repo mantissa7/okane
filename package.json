@@ -1,0 +1,19 @@
+{
+  "name": "okane",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest",
+    "pg-gateway": "^0.3.0-beta.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.2.12",
+    "preact": "^10.24.3",
+    "preact-render-to-string": "^6.5.11",
+    "starling-developer-sdk": "^1.0.3"
+  }
+}
